@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35728.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Core", "0.Core", "{E74E3A50-C846-47F1-A888-478643BDC1EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.EnterpriseBusinessRules", "1.EnterpriseBusinessRules", "{7AEEC4D1-CE49-453F-ACB0-D2AC77546010}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.ApplicationsBusinessRules", "2.ApplicationsBusinessRules", "{7D65699B-4B9B-4CE0-BBA6-A53D52B445D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.InterfaceAdapters", "3.InterfaceAdapters", "{C1E1F60D-7B85-4CAA-B43A-B03CAF9E5374}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.FrameworksAndDrivers", "4.FrameworksAndDrivers", "{80654649-2CE2-4267-A190-4C4CCD329D34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{6C8E9806-FA5D-4C4D-A0F1-934D6B29CADE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuesosKesada.OrderSales.Entity", "QuesosKesada.OrderSales.Entity\QuesosKesada.OrderSales.Entity.csproj", "{9E0010E7-ABBE-43E3-9D92-DB1859D97002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuesosKesada.OrderSales.BusinessObjects", "QuesosKesada.OrderSales.BusinessObjects\QuesosKesada.OrderSales.BusinessObjects.csproj", "{E857DBFC-BFF7-468C-A6E4-61C18FE577B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuesosKesada.OrderSales.UseCase", "QuesosKesada.OrderSales.UseCase\QuesosKesada.OrderSales.UseCase.csproj", "{CEBE5530-4E9C-45B9-AADA-3E726CBE3472}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E0010E7-ABBE-43E3-9D92-DB1859D97002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E0010E7-ABBE-43E3-9D92-DB1859D97002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E0010E7-ABBE-43E3-9D92-DB1859D97002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E0010E7-ABBE-43E3-9D92-DB1859D97002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E857DBFC-BFF7-468C-A6E4-61C18FE577B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E857DBFC-BFF7-468C-A6E4-61C18FE577B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E857DBFC-BFF7-468C-A6E4-61C18FE577B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E857DBFC-BFF7-468C-A6E4-61C18FE577B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEBE5530-4E9C-45B9-AADA-3E726CBE3472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEBE5530-4E9C-45B9-AADA-3E726CBE3472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEBE5530-4E9C-45B9-AADA-3E726CBE3472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEBE5530-4E9C-45B9-AADA-3E726CBE3472}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7AEEC4D1-CE49-453F-ACB0-D2AC77546010} = {E74E3A50-C846-47F1-A888-478643BDC1EF}
+		{7D65699B-4B9B-4CE0-BBA6-A53D52B445D7} = {E74E3A50-C846-47F1-A888-478643BDC1EF}
+		{6C8E9806-FA5D-4C4D-A0F1-934D6B29CADE} = {7AEEC4D1-CE49-453F-ACB0-D2AC77546010}
+		{9E0010E7-ABBE-43E3-9D92-DB1859D97002} = {6C8E9806-FA5D-4C4D-A0F1-934D6B29CADE}
+		{E857DBFC-BFF7-468C-A6E4-61C18FE577B1} = {7D65699B-4B9B-4CE0-BBA6-A53D52B445D7}
+		{CEBE5530-4E9C-45B9-AADA-3E726CBE3472} = {7D65699B-4B9B-4CE0-BBA6-A53D52B445D7}
+	EndGlobalSection
+EndGlobal
