@@ -1,6 +1,7 @@
 ﻿namespace QuesosKesada.OrderSales.Entity.Entities;
 public class OrderDetail
 {
+
     /// <summary>
     /// Representa un ítem de una orden de compra.
     /// </summary>

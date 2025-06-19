@@ -1,4 +1,4 @@
-﻿using QuesosKesada.OrderSales.BusinessObjects.Repositories;
+﻿using QuesosKesada.OrderSales.BusinessObjects.Repositories.Interface;
 using QuesosKesada.OrderSales.Entity.Aggregate;
 using QuesosKesada.OrderSales.Entity.DTOs;
 using QuesosKesada.OrderSales.Entity.Interfaces;

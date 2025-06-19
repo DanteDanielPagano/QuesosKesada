@@ -6,16 +6,32 @@ public class OrderAggregate : OrderHeader
 {
     readonly private List<OrderDetail> _orderDetailsField = new();
     public IReadOnlyCollection<OrderDetail> OrderDetails => _orderDetailsField;
+    //{
+    //    get
+    //    {
+    //        return _orderDetailsField;
+    //    }
+    //}
 
     public void AddDetail(int productId, float unitPrice, int quantity)
     {
-        var existinOrderDetail = _orderDetailsField.
-            FirstOrDefault(o => o.ProductId == productId);
+        //var existingOrderDetail = _orderDetailsField.
+        //    FirstOrDefault(o => o.ProductId == productId);
 
-        if (existinOrderDetail != null)
+        OrderDetail existingOrderDetail = null;
+
+        foreach (var d in _orderDetailsField)
         {
-            quantity += existinOrderDetail.Quantity;
-            _orderDetailsField.Remove(existinOrderDetail);
+            if (d.ProductId == productId)
+            {
+                existingOrderDetail = new OrderDetail(d.ProductId, d.UnitPrice, d.Quantity);
+            }
+        }
+
+        if (existingOrderDetail != null)
+        {
+            quantity += existingOrderDetail.Quantity;
+            _orderDetailsField.Remove(existingOrderDetail);
         }
 
         _orderDetailsField.Add(new OrderDetail(productId, unitPrice, quantity));
@@ -23,6 +39,7 @@ public class OrderAggregate : OrderHeader
 
     public static OrderAggregate From(OrderDto orderDto)
     {
+        //Mapeamos el DTO en el OrderAggregate
         OrderAggregate order = new()
         {
             CustomerId = orderDto.CustomerId,
@@ -31,6 +48,8 @@ public class OrderAggregate : OrderHeader
             ShippingCountry = orderDto.ShippingCountry,
             ShippingPostalCode = orderDto.ShippingPostalCode
         };
+
+
         foreach (var item in orderDto.OrderDetails)
         {
             order.AddDetail(
