@@ -2,6 +2,7 @@
 using QuesosKesada.OrderSales.Entity.Aggregate;
 using QuesosKesada.OrderSales.Entity.DTOs;
 using QuesosKesada.OrderSales.Entity.Interfaces;
+using QuesosKesada.Shared.Guards;
 
 namespace QuesosKesada.OrderSales.UseCase.Implementations;
 internal class CreateOrderInteractor : ICreateOrderInputPort
@@ -23,6 +24,9 @@ internal class CreateOrderInteractor : ICreateOrderInputPort
             throw new ArgumentNullException(nameof(orderDto));
         }
 
+        Guard.Against(orderDto.ShippingAddress, "Dirección de envío")
+            .NotNullOrEmpty("El campo Dirección es obligatorio.")
+            .MaxLength(25, "El campo Dirección debe contener como máximo 25 caracteres.");
 
         var orderAggregate = OrderAggregate.From(orderDto);
         await _orderCommands.Create(orderAggregate);

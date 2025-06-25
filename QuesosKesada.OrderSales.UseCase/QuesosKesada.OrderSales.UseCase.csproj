@@ -12,6 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\QuesosKesada.OrderSales.BusinessObjects\QuesosKesada.OrderSales.BusinessObjects.csproj" />
     <ProjectReference Include="..\QuesosKesada.OrderSales.Entity\QuesosKesada.OrderSales.Entity.csproj" />
+    <ProjectReference Include="..\QuesosKesada.Shared.Guards\QuesosKesada.Shared.Guards.csproj" />
   </ItemGroup>
 
 </Project>
