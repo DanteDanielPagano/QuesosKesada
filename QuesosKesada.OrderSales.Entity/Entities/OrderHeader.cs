@@ -11,7 +11,6 @@ public class OrderHeader
     public string ShippingCountry { get; set; }
     public string ShippingPostalCode { get; set; }
 
-
     // Implementation of business rules
     public ShippingType ShippingMethodId { get; set; } = ShippingType.Road;
     public DiscountType DiscountType { get; set; } = DiscountType.Percentage;

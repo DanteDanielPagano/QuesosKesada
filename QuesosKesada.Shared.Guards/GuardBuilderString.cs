@@ -6,7 +6,6 @@ public class GuardBuilderString
 {
     private readonly string _value;
     private readonly string _parameterName;
-
     public GuardBuilderString(string value, string parameterName)
     {
         _value = value;
@@ -35,6 +34,13 @@ public class GuardBuilderString
 
     public GuardBuilderString MaxLength(int maxLength, string? message = null)
     {
+        if (_valor <= maxLength)
+        {
+            throw new Exception(message ??
+                $"El parámetro '{_parameterName}' no puede superar los {maxLength} caracteres.");
+        }
+
+
         if (_value.Length > maxLength)
             throw new Exception(message ??
                 $"El parámetro '{_parameterName}' no puede superar los {maxLength} caracteres.");

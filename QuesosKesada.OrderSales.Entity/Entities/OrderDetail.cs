@@ -16,6 +16,7 @@ public class OrderDetail
     }
 
     public int Id { get; set; }
+    public int IdOrderHeader { get; set; }
     public int ProductId { get; set; }
     public float UnitPrice { get; set; }
     public int Quantity { get; set; } // Property public that represents the quantity of the product in the order detail

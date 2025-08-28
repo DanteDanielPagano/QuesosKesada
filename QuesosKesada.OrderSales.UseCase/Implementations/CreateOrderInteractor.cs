@@ -19,10 +19,7 @@ internal class CreateOrderInteractor : ICreateOrderInputPort
 
     public async Task Handle(OrderDto orderDto)
     {
-        if (orderDto == null)
-        {
-            throw new ArgumentNullException(nameof(orderDto));
-        }
+        ArgumentNullException.ThrowIfNull(orderDto);
 
         Guard.Against(orderDto.ShippingAddress, "Dirección de envío")
             .NotNullOrEmpty("El campo Dirección es obligatorio.")
