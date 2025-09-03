@@ -1,0 +1,24 @@
+﻿
+<Router AppAssembly="@typeof(App).Assembly">
+	<Found Context="routeData">
+		<ErrorBoundary>
+			<ChildContent>
+				<RouteView RouteData="@routeData" 
+					DefaultLayout="@typeof(MainLayout)" />
+			</ChildContent>
+			<ErrorContent>
+				<p>Ocurrio un error inesperado</p>
+			</ErrorContent>
+		</ErrorBoundary>
+	</Found>
+	<NotFound>
+
+		<LayoutView Layout="@typeof(MainLayout)">
+			<p>Lo sentimos, no se encontro la pagina </p>
+		</LayoutView>
+	</NotFound>
+</Router>
+
+@code {
+
+}
